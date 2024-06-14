@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context ="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+        
+	
+	<!-- Autowire with attribue byName [id and classname must be same]
+	
+	<bean id="stu" class="com.beans.autowire.Student" autowire="byName"/>
+		<bean id="address" class="com.beans.autowire.Address">
+			<property name="cityName" value="Hyderabad" />
+			<property name="stateName" value="Telangana" />
+	    </bean>
+	-->
+	
+
+
+	<!-- Autowire with attribue byType [id and classname may not be same]
+	
+	<bean id="stu" class="com.beans.autowire.Student" autowire="byType"/>
+		<bean id="add" class="com.beans.autowire.Address">
+			<property name="cityName" value="Hyderabad" />
+		</bean>
+	-->
+
+	
+	
+	<!-- Autowire with attribue constructor [id and classname may not be same]
+	
+	<bean id="stu" class="com.beans.autowire.Student" autowire="constructor"/>
+		<bean id="address" class="com.beans.autowire.Address">
+			<property name="cityName" value="Hyderabad" />
+		</bean>
+	-->
+	
+	
+	
+	<!-- annotation based wiring: 
+	
+	<context:annotation-config/>
+	<bean id="stu" class="com.beans.autowire.Student1"/>
+	
+		<bean id="add" class="com.beans.autowire.Address">
+
+			<property name="cityName" value="guntur" />
+		</bean>
+	-->
+	
+	
+	<!--Auto discovery-->
+	<context:component-scan base-package="com.beans.autowire"/>
+		<bean id="add" class="com.beans.autowire.Address">
+
+			<property name="cityName" value="bapatla" />
+		</bean>
+</beans>
