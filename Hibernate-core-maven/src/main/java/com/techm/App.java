@@ -28,8 +28,8 @@ public class App
 		//inserting into sql database
 		
 				Student1 e = new Student1();
-				e.setStid(106);
-				e.setStname("priya");
+				e.setStid(111);
+				e.setStname("swathi");
 				session.save(e);	
 				t.commit();
 				System.out.println("successfully saved"); 
