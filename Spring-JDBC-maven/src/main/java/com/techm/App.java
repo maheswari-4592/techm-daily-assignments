@@ -12,7 +12,7 @@ public class App {
         JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
 
         App app = new App();
-        app.insertData(jdbcTemplate, 3,"John Doe", 25);
+        app.insertData(jdbcTemplate, 4,"preetham", 25);
         app.queryData(jdbcTemplate, 4);
     }
 
